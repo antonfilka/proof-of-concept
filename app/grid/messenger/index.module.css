@@ -1,0 +1,81 @@
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  grid-template-rows: 70px calc(100vh - 70px);
+  grid-template-areas:
+    " header header "
+    " nav messenger";
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-area: header;
+  background-color: aliceblue;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: rgb(189, 245, 255);
+  overflow-y: scroll;
+}
+
+.messenger {
+  grid-area: messenger;
+  display: grid;
+  grid-template-rows: calc(100vh - 70px - 50px) 50px;
+  background-color: rgb(234, 211, 136);
+}
+
+.userNav {
+  height: 60px;
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  gap: 15px;
+  grid-template-columns: auto 1fr;
+  background-color: rgb(219, 219, 219);
+  border: 1px solid rgb(169, 169, 169);
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(83, 38, 84);
+}
+
+.messages {
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+  overflow: auto;
+  overflow-y: auto;
+}
+
+.input {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 100px;
+  padding: 10px;
+  background-color: rgb(219, 219, 219);
+}
+
+.message {
+  width: 200px;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.rightMessage {
+  justify-self: last baseline;
+}
+
+.senderName {
+  font-weight: 700;
+}

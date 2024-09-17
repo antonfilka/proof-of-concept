@@ -1,0 +1,87 @@
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 70px 70px auto auto 60px;
+  grid-template-areas:
+    " header header header header"
+    " nav nav nav nav"
+    " signUp signUp content content"
+    " featureRed featurePurple content content"
+    " footer footer footer footer";
+}
+
+@media screen and (max-width: 1023px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 70px 70px 200px auto 60px;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "signUp content"
+      "featureRed featurePurple"
+      "footer footer";
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 70px auto 200px auto auto 60px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "signUp"
+      "content"
+      "featureRed"
+      "featurePurple"
+      "footer";
+  }
+}
+
+.header {
+  grid-area: header;
+  background-color: aliceblue;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: rgb(189, 245, 255);
+}
+
+.signUp {
+  grid-area: signUp;
+  background-color: rgb(224, 255, 189);
+}
+
+.content {
+  text-align: center;
+  overflow-y: auto;
+  grid-area: content;
+  background-color: rgb(234, 211, 136);
+}
+
+.featureRed {
+  grid-area: featureRed;
+  background-color: rgb(222, 112, 112);
+}
+
+.featurePurple {
+  grid-area: featurePurple;
+  background-color: rgb(154, 95, 166);
+}
+
+.footer {
+  grid-area: footer;
+  color: white;
+  background-color: rgb(46, 46, 46);
+}
+
+.baseItem {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border: 1px dashed rgb(0, 0, 0);
+}
