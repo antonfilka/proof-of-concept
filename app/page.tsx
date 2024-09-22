@@ -19,6 +19,15 @@ export default function Home() {
           Messenger
         </a>
       </div>
+      <div className="grid gap-2">
+        <h2 className="text-3xl font-bold">Other</h2>
+        <a
+          className="text-lg hover:text-[#31152a]"
+          href="/antonfilka-components"
+        >
+          Antonfilka components
+        </a>
+      </div>
       {/* <div className="">
         <h2 className="text-3xl font-bold">Flex</h2>
       </div> */}
