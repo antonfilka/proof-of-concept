@@ -5,18 +5,16 @@ const USBDevices = () => {
   const [devices, setDevices] = useState<any>([]);
   const [error, setError] = useState("");
 
-  // Function to request USB devices
   const requestUSBDevice = async () => {
     try {
-      setError(""); // Clear any previous errors
-      // Request device
+      setError("");
 
       if (navigator?.usb) {
         const selectedDevices = await navigator.usb.requestDevice({
           filters: [],
         });
         console.log(selectedDevices);
-        setDevices([selectedDevices]); // Set the device to state
+        setDevices([selectedDevices]);
       }
     } catch (err) {
       setError("No devices found or permission denied.");
@@ -24,11 +22,10 @@ const USBDevices = () => {
     }
   };
 
-  // Function to get all USB devices already connected
   const getConnectedDevices = async () => {
     try {
       const connectedDevices = await navigator.usb.getDevices();
-      setDevices(connectedDevices); // Set the devices to state
+      setDevices(connectedDevices);
     } catch (err) {
       setError("Error fetching connected devices.");
       console.error(err);
