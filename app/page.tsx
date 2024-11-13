@@ -1,36 +1,77 @@
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { Link } from "@nextui-org/link";
+import { Divider } from "@nextui-org/react";
+
 export default function Home() {
   return (
-    <div className="grid grid-cols-[1fr_1fr] grid-rows-[auto_1fr_1fr] items-baseline justify-items-baseline min-h-screen gap-16 p-10 font-[family-name:var(--font-geist-sans)]">
-      <div className="col-span-2 text-center">
+    <div className="grid grid-cols-[1fr_1fr_1fr] grid-rows-[auto_1fr_1fr] items-baseline justify-items-baseline min-h-screen gap-16 p-10">
+      <div className="col-span-3 text-center">
         <h1 className="text-3xl font-bold">Proof of concept</h1>
       </div>
-      <div className="grid gap-2">
-        <h2 className="text-3xl font-bold">Grids</h2>
-        <a
-          className="text-lg hover:text-[#31152a]"
-          href="/grid/responsive-layout"
-        >
-          Responsive layout
-        </a>
-        <a className="text-lg hover:text-[#31152a]" href="/grid/cards-layout">
-          Cards layout
-        </a>
-        <a className="text-lg hover:text-[#31152a]" href="/grid/messenger">
-          Messenger
-        </a>
-      </div>
-      <div className="grid gap-2">
-        <h2 className="text-3xl font-bold">Other</h2>
-        <a
-          className="text-lg hover:text-[#31152a]"
-          href="/antonfilka-components"
-        >
-          Antonfilka components
-        </a>
-      </div>
-      {/* <div className="">
-        <h2 className="text-3xl font-bold">Flex</h2>
-      </div> */}
+      <Card className="max-w-[400px]">
+        <CardHeader>
+          <h2 className="text-base">Grids</h2>
+        </CardHeader>
+        <Divider />
+        <CardBody>
+          <Link
+            isBlock
+            showAnchorIcon
+            href="/grid/responsive-layout"
+            color="foreground"
+          >
+            Responsive layout
+          </Link>
+          <Link
+            isBlock
+            showAnchorIcon
+            href="/grid/cards-layout"
+            color="foreground"
+          >
+            Cards layout
+          </Link>
+          <Link
+            isBlock
+            showAnchorIcon
+            href="/grid/messenger"
+            color="foreground"
+          >
+            Messenger
+          </Link>
+        </CardBody>
+      </Card>
+      <Card className="max-w-[400px]">
+        <CardHeader>
+          <h2 className="text-base">Flex</h2>
+        </CardHeader>
+        <Divider />
+        <CardBody>
+          <Link
+            isBlock
+            showAnchorIcon
+            href="/flex/playground"
+            color="foreground"
+          >
+            Flex playground
+          </Link>
+        </CardBody>
+      </Card>
+      <Card className="max-w-[400px]">
+        <CardHeader>
+          <h2 className="text-lg">Other</h2>
+        </CardHeader>
+        <Divider />
+        <CardBody>
+          <Link
+            isBlock
+            showAnchorIcon
+            href="/antonfilka-components"
+            color="foreground"
+          >
+            Antonfilka components
+          </Link>
+        </CardBody>
+      </Card>
     </div>
   );
 }
